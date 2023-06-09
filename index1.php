@@ -1,72 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Seat Booking System</title>
- 
-    <style>
-    #llog{
-    text-align: center;
-    margin-top: 25px;
-    color: darkcyan;
-    font-size: xx-large;
-    }  
-    </style>
-  </head>
+	<title>Booking Form HTML Template</title>
 
-  <body>
-  
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-  <div class ="container">
-<div class="col-sm-12">
-<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #85a5c666!important;">
-  <a class="navbar-brand" href="#">Seat Booking System</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
-<!-- end of navbar -->
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
-<!-- Start -->
-<div class="col-sm-12">
-<div class="row">
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
 
-<div class="col-sm-3">
-    <img src="img/Bus.jpg" width="auto" height="300px;" style="margin-top:20px"/>
-    </div>
-    <div class="col-sm-9">
-        <div id="sidebar" style="float:right">
-        <div id="booking" class="section">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h2 style="font-family:cursive; margin-top:25px; color:green;">Apply For Booking </h2>
-                            <hr>
+							<h2>Seat Booking System</h2>
 						</div>
 						<form>
 							<div class="row">
@@ -165,21 +133,6 @@
 			</div>
 		</div>
 	</div>
-    
-</div>
-</div>
-</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-<!--  End of col-sm-12 offset-2  -->
-
-
-</div>   
-  </body>
 </html>
- <!-- Optional JavaScript; choose one of the two! -->
-
-    
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-   
