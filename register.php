@@ -1,78 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Login and Registration | SBS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  #btn1{
 
-    <title>Seat Booking System</title>
- 
-    <style>
-    #llog{
-    text-align: center;
-    margin-top: 25px;
-    color: darkcyan;
-    font-size: xx-large;
-    }  
+    margin-left: 25px;
+  }
     </style>
-  </head>
+<body>
 
-  <body>
-  
+    <header>
+        <h2 class="logo">Seat Booking System</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Disabled</a>
+        </nav> 
+        <span> <a href="login.php"> <button class="btn btn-outline-primary" id="btn1">login</button></a></span>
+    </header>
 
-  <div class ="container-fluid">
-<div class="col-sm-12">
-<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #85a5c666!important;">
-  <a class="navbar-brand" href="#">Seat Booking System</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
-<!-- end of navbar -->
-<div class="col-sm-12 offset-2">
-  <div class="col-sm-6">
-  <h5 id='llog'>Registration Form</h5>  
-   <hr>
-  <div class="form-group">
-    <label>Email</label>
-    <input type="text" name="email" class="form-control"/>
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="text" name="password" class="form-control"/>
-  </div>
-  <button class="btn btn-outline-primary" type="submit">Register</button>
-</div>
-<!--  End of col-sm-12 offset-2  -->
-</div>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        
+        <div class="form-box login">
+            <h2>Registration</h2>
+            <span>
+                <?php
+                if(isset($_GET['alert'])){
+                    echo $_GET['alert'];
+                }
+                ?>
+            </span>
+            <form action="action.php?form=register" method="POST">
+                
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></ion-icon></span>
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
 
-</div>   
-  </body>
-</html>
- <!-- Optional JavaScript; choose one of the two! -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
 
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                
+                <input type="submit" name="btn_register" class="btn" value="Register">
+                <div class="login-register">
+                    <p>Already have an account? <a
+                     href="#" class="register-link">Login</a></p>
+            </form>
+        </div>    
+
+        
+
+    </div>
     
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-   
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>    

@@ -14,7 +14,7 @@
     #llog{
     text-align: center;
     margin-top: 25px;
-    color: darkcyan;
+    color:;
     font-size: xx-large;
     }  
     </style>
@@ -23,28 +23,16 @@
   <body>
   
 
-  <div class ="container">
-<div class="col-sm-12">
-<nav class="navbar navbar-expand-lg navbar-light"style="background-color: #85a5c666!important;">
-  <a class="navbar-brand" href="#">Seat Booking System</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
+  <header>
+        <h2 class="logo">Seat Booking System</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Disabled</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav> 
+    </header>
   </div>
 </nav>
 </div>
@@ -55,51 +43,51 @@
 <div class="row">
 
 <div class="col-sm-3">
-    <img src="img/Bus.jpg" width="auto" height="300px;" style="margin-top:20px"/>
+    <img src="img/seats.jpg" width="1080" height="680px;" style="margin-top:20px"/>
     </div>
     <div class="col-sm-9">
-        <div id="sidebar" style="float:right">
+        <div id="sidebar" style="float:center">
         <div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h2 style="font-family:cursive; margin-top:25px; color:green;">Apply For Booking </h2>
+							<h2 style="font-family:cursive; margin-top:25px; color:blue;">Apply For Booking </h2>
                             <hr>
 						</div>
-						<form>
+						<form action="controller.php" method="post">
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Name</span>
-										<input class="form-control" type="text" placeholder="Enter your name">
+										<input class="form-control" type="text" placeholder="Enter your name" name="name">
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Email</span>
-										<input class="form-control" type="email" placeholder="Enter your email">
+										<input class="form-control" type="email" placeholder="Enter your email" name="email">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<span class="form-label">Phone</span>
-								<input class="form-control" type="tel" placeholder="Enter your phone number">
+								<input class="form-control" type="tel" placeholder="Enter your phone number" name="phone">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Pickup Location</span>
-								<input class="form-control" type="text" placeholder="Enter ZIP/Location">
+								<input class="form-control" type="text" placeholder="Enter ZIP/Location" name="pickup_location">
 							</div>
 							<div class="form-group">
 								<span class="form-label">Destination</span>
-								<input class="form-control" type="text" placeholder="Enter ZIP/Location">
+								<input class="form-control" type="text" placeholder="Enter ZIP/Location" name="destination">
 							</div>
 							<div class="row">
 								<div class="col-sm-5">
 									<div class="form-group">
 										<span class="form-label">Pickup Date</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" required name="pickup_date">
 									</div>
 								</div>
 								<div class="col-sm-7">
@@ -107,57 +95,26 @@
 										<div class="col-sm-4">
 											<div class="form-group">
 												<span class="form-label">Hour</span>
-												<select class="form-control">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-													<option>10</option>
-													<option>11</option>
-													<option>12</option>
-												</select>
+										<input type="time" name="time" class="form-control" style="width:200px;">
 												<span class="select-arrow"></span>
 											</div>
 										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<span class="form-label">Min</span>
-												<select class="form-control">
-													<option>05</option>
-													<option>10</option>
-													<option>15</option>
-													<option>20</option>
-													<option>25</option>
-													<option>30</option>
-													<option>35</option>
-													<option>40</option>
-													<option>45</option>
-													<option>50</option>
-													<option>55</option>
-												</select>
-												<span class="select-arrow"></span>
-											</div>
-										</div>
-										<div class="col-sm-4">
+										
+										<!-- <div class="col-sm-4">
 											<div class="form-group">
 												<span class="form-label">AM/PM</span>
-												<select class="form-control">
+												<select class="form-control" name="am">
 													<option>AM</option>
 													<option>PM</option>
 												</select>
 												<span class="select-arrow"></span>
 											</div>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
 							<div class="form-btn">
-								<button class="btn btn-primary">Book Now</button>
+								<input type="submit" class="btn btn-primary" name ="btn_book"value="book">
 							</div>
 						</form>
 					</div>
